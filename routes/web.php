@@ -36,3 +36,6 @@ Route::get('/videos', function () {
 Route::get('/events', function () {
     return view('events');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
